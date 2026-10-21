@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url('https://ironberg.com.br/assets/images/and01264-2.webp') no-repeat center center fixed;
+    color:#fe0404;
+     text-align: center;
+}
+
+main{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.card{
+    background-color: #fe0101;
+    border: 2px solid #fdfcfb;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px;
+}
+.card h4{
+    color:#ffffff
+}
+.card p{
+    color:#ffffff
+}
+
+#promo-dia{
+background-color: #6c0c0c;
+color:#f5f4f4;
+border :2px solid #fdfcfb;
+text-align: center;
+}
+
+.destaque{
+    border-color: #c4262e;
+    background-color: #f4f4ff;
+}
+.destaque h4{
+    color:#010101
+}
+.destaque p{
+    color:#010101
+}
+
+.esgotado{
+    opacity: 0.5;
+}
+.esgotado h4{
+    text-decoration: line-through;
+}
+nav a{
+    color:#ffffff;
+    text-decoration: none;
+}
