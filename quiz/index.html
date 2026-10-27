@@ -26,10 +26,10 @@
   --line: #E2E8F0;
 
   /* Cores de destaque tech e dinâmicas */
-  --primary: #4F46E5;
+  --primary: #fcfcfd;
   --primary-soft: #EEF2FF;
   --accent: #F97316;
-  --accent-soft: #FFF7ED;
+  --accent-soft: #dddad6;
   --on-accent: #FFFFFF;
 
   --radius-sm: 8px;
@@ -45,21 +45,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0B0F19;
-    --surface: #131B2E;
-    --surface-hover: #1E293B;
-    --ink: #F8FAFC;
-    --muted: #94A3B8;
-    --line: #1E293B;
+    --bg: #fafbfd;
+    --surface: #fdcf02;
+    --surface-hover: #c2c2c2;
+    --ink: #0a0a0a;
+    --muted: #070707;
+    --line: #0a0a0ae5;
 
-    --primary: #818CF8;
-    --primary-soft: #1E1B4B;
-    --accent: #FB923C;
-    --accent-soft: #431407;
-    --on-accent: #0B0F19;
-
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+    --primary: #01a2ff;
+    --primary-soft: #c2c2c26e;
+    --accent: #01a2ff;
+    --accent-soft: #c2c2c26e;
+    --on-accent: #f3f4f7;
+    --shadow-md: 0 4px 16px -2px rgba(247, 243, 243, 0.4);
     color-scheme: dark;
   }
 }
@@ -75,7 +73,7 @@
   --primary: #818CF8;
   --primary-soft: #1E1B4B;
   --accent: #FB923C;
-  --accent-soft: #431407;
+  --accent-soft: #c2c2c2;
   --on-accent: #0B0F19;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -625,34 +623,33 @@ tr:last-child td { border-bottom: 0; }
   <nav class="abas" aria-label="Seções do site">
     <button class="aba" type="button" data-aba="inicio">Início</button>
     <button class="aba" type="button" data-aba="jogo">Jogo</button>
-    <button class="aba" type="button" data-aba="guia">Guia</button>
+    <button class="aba" type="button" data-aba="guia">Dicas</button>
   </nav>
 
   <!-- INÍCIO -->
   <main id="aba-inicio">
     <section class="hero">
       <p class="eyebrow">Semana da Biblioteca 2026</p>
-      <h1>Humano ou IA? Você decide</h1>
+      <h1>Escolha entre humano e IA</h1>
       <div class="barra" aria-hidden="true"></div>
-      <p class="lead">Um jogo de dilemas e um guia de uso consciente da inteligência artificial, sobre o tema <b>Inteligência com Consciência: o humano no centro da era digital</b>.</p>
+      <p class="lead">Um jogo de escolhas com dicas sobre o consciente da inteligência artificial, sobre o tema <b>Inteligência artificial pode ate surpreender mas o humano é o centro da era digital</b>.</p>
     </section>
     <section class="modulos" aria-label="Módulos">
       <article class="modulo">
-        <p class="rotulo">Módulo 1</p>
-        <h2>Jogo de dilemas</h2>
-        <p><span class="js-total">8</span> situações do dia a dia. Em cada uma, você escolhe quem deve decidir: a IA, a pessoa ou os dois juntos.</p>
-        <button class="btn" type="button" data-ir="jogo">Jogar</button>
+        <p class="rotulo">Elemento 1</p>
+        <h2>Quiz das escolhas</h2>
+        <p><span class="js-total"></span> Descubra quem toma as melhores decisões! Em 10 situações do cotidiano, escolha se a decisão deve ser feita pela inteligência artificial, por uma pessoa ou em conjunto.</p>
+        <button class="btn" type="button" data-ir="jogo">Iniciar o quiz</button>
       </article>
       <article class="modulo">
-        <p class="rotulo">Módulo 2</p>
-        <h2>Guia de uso consciente</h2>
-        <p><span class="js-total-dicas">6</span> hábitos para usar a IA com responsabilidade, nos estudos e fora da escola.</p>
-        <button class="btn sec" type="button" data-ir="guia">Ler o guia</button>
+        <p class="rotulo">Elemento 2</p>
+        <h2>Dicas para usar a IA</h2>
+        <p><span class="js-total-dicas"></span> Confira 6 dicas práticas para aproveitar a inteligência artificial com responsabilidade, nos estudos e no dia a dia, usando seus recursos de forma consciente e segura.</p>
+        <button class="btn sec" type="button" data-ir="guia">Ver as dicas</button>
       </article>
     </section>
     <section class="sobre">
-      <p><strong>Como funciona.</strong> O jogo não tem resposta única. Cada dilema traz um caminho sugerido e uma explicação para você pensar.</p>
-      <p>Não pedimos nome nem cadastro, e nada do que você escolhe é guardado.</p>
+      <p><strong>Como funciona?</strong> O jogo não possui uma única resposta correta. Cada situação apresenta uma sugestão de escolha acompanhada de uma explicação para ajudar você a refletir. Não é necessário informar seu nome ou realizar cadastro, e suas respostas não ficam armazenadas.</p>
     </section>
   </main>
 
@@ -660,7 +657,7 @@ tr:last-child td { border-bottom: 0; }
   <main id="aba-jogo" hidden>
     <section class="jogo" id="quiz">
       <div>
-        <div class="progresso-linha"><span id="progresso-texto">Dilema 1 de 8</span><span id="progresso-ctx"></span></div>
+        <div class="progresso-linha"><span id="progresso-texto">pergunta 1 de 10</span><span id="progresso-ctx"></span></div>
         <div class="trilho" aria-hidden="true"><i id="progresso-barra"></i></div>
       </div>
       <p class="contexto" id="q-contexto"></p>
@@ -671,7 +668,7 @@ tr:last-child td { border-bottom: 0; }
         <h3 id="q-retorno-titulo" tabindex="-1">Para pensar</h3>
         <p class="veredito" id="q-veredito"></p>
         <p id="q-explicacao"></p>
-        <button class="btn" type="button" id="q-proximo">Próximo dilema</button>
+        <button class="btn" type="button" id="q-proximo">Próxima pergunta</button>
       </section>
     </section>
 
@@ -681,15 +678,15 @@ tr:last-child td { border-bottom: 0; }
       <p class="resumo" id="r-resumo"></p>
       <div class="tabela-box">
         <table>
-          <thead><tr><th scope="col">Dilema</th><th scope="col">Sua escolha</th><th scope="col">Caminho sugerido</th></tr></thead>
+          <thead><tr><th scope="col">Pergunta</th><th scope="col">Sua escolha</th><th scope="col">Sugestão</th></tr></thead>
           <tbody id="r-linhas"></tbody>
         </table>
       </div>
       <p class="nota">Não existe placar certo ou errado. O que importa é saber explicar por que você escolheu cada caminho.</p>
-      <p class="carta">Na sexta, 30/10, a Carta para o Futuro é escrita à mão, sem IA. Pense nela: que profissional você quer ser?</p>
+      <p class="carta">No dia 30/10, você vai escrever à mão uma carta para o seu eu do futuro, contando seus sonhos, seus objetivos e o que espera conquistar na vida profissional com a orientação da bibliotecaria Luana.</p>
       <div class="acoes">
         <button class="btn" type="button" id="r-reiniciar">Jogar de novo</button>
-        <button class="btn sec" type="button" data-ir="guia">Ler o guia</button>
+        <button class="btn sec" type="button" data-ir="guia">Ler as dicas</button>
       </div>
     </section>
   </main>
@@ -735,96 +732,109 @@ var OPCOES = {
 
 var DILEMAS = [
   {
-    contexto: "Escola",
-    situacao: "A IA lê as respostas discursivas da turma e propõe uma nota para cada aluno.",
-    pergunta: "Quem define a nota final?",
+    contexto: "Redes sociais",
+    situacao: "Uma IA recomenda publicações com base nos seus interesses e no seu comportamento na internet.",
+    pergunta: "Quem escolhe o conteúdo que você vai consumir?",
     sugerido: "juntos",
-    explicacao: "A IA ajuda a organizar e comparar respostas, mas não conhece o esforço do aluno nem o contexto da turma. O professor revisa a sugestão e assume a nota final."
+    explicacao: "A IA pode recomendar conteúdos interessantes, mas também pode limitar o contato com outras opiniões. Ela ajuda nas sugestões, enquanto a pessoa escolhe o que deseja ver."
   },
   {
-    contexto: "Trabalho",
-    situacao: "Um sistema ordena 500 currículos e separa os 10 melhores para a entrevista.",
-    pergunta: "Quem escolhe o candidato à vaga?",
+    contexto: "Educação",
+    situacao: "Um estudante pede para uma IA resolver uma atividade inteira sem tentar responder sozinho.",
+    pergunta: "Quem deve resolver a atividade?",
     sugerido: "pessoa",
-    explicacao: "Sistemas aprendem com dados do passado e podem repetir injustiças antigas, como favorecer certos perfis. A IA pode ajudar na triagem, mas escolher uma pessoa para uma vaga é decisão humana."
+    explicacao: "O estudante precisa desenvolver seu próprio raciocínio para aprender. A IA pode explicar o conteúdo e dar exemplos, mas o aluno deve participar da resolução."
   },
   {
     contexto: "Saúde",
-    situacao: "Um programa analisa uma radiografia e aponta uma possível alteração.",
-    pergunta: "Quem dá o diagnóstico?",
+    situacao: "Uma IA analisa os sintomas de uma pessoa e sugere possíveis causas para o problema.",
+    pergunta: "Quem decide qual tratamento seguir?",
+    sugerido: "pessoa",
+    explicacao: "A IA pode apresentar informações úteis, mas pode cometer erros e não conhecer todo o histórico do paciente. Um profissional de saúde deve avaliar o caso e orientar o tratamento."
+  },
+  {
+    contexto: "Trabalho",
+    situacao: "Uma empresa utiliza IA para organizar as tarefas dos funcionários de acordo com suas habilidades.",
+    pergunta: "Quem define a divisão final das tarefas?",
     sugerido: "juntos",
-    explicacao: "A IA pode notar detalhes que passam despercebidos e ganhar tempo. O diagnóstico envolve exames, histórico e conversa com o paciente, e quem responde por ele é o profissional de saúde."
+    explicacao: "A IA pode organizar as tarefas com rapidez, mas os funcionários também possuem preferências e necessidades. A combinação entre sugestões automáticas e avaliação humana pode gerar uma divisão mais justa."
   },
   {
-    contexto: "Estudos",
-    situacao: "Você precisa escrever um texto sobre o tema da Semana da Biblioteca.",
-    pergunta: "Quem escreve o texto?",
+    contexto: "Segurança",
+    situacao: "Um sistema de reconhecimento facial identifica uma pessoa como possível suspeita em um local público.",
+    pergunta: "Quem decide se a pessoa deve ser investigada?",
     sugerido: "pessoa",
-    explicacao: "O objetivo do trabalho é você pensar, pesquisar e organizar as ideias. A IA pode explicar um conceito ou revisar o texto depois, mas, se ela escreve tudo, o aprendizado deixa de ser seu. Se usar IA, diga como usou."
+    explicacao: "O reconhecimento facial pode apresentar erros e identificar pessoas incorretamente. A IA pode fornecer informações para análise, mas uma pessoa responsável deve verificar as evidências antes de tomar medidas."
   },
   {
-    contexto: "Dia a dia",
-    situacao: "O aplicativo de mapas escolhe o trajeto mais rápido para você chegar à escola.",
-    pergunta: "Quem decide a rota?",
-    sugerido: "ia",
-    explicacao: "É uma tarefa de baixo risco e fácil de conferir: se a rota parecer estranha, você percebe e muda. Entregar a decisão à IA faz sentido quando o erro é pequeno e dá para corrigir."
-  },
-  {
-    contexto: "Escola",
-    situacao: "Uma câmera com IA indica que um aluno parece agitado e sugere uma advertência.",
-    pergunta: "Quem decide a punição?",
-    sugerido: "pessoa",
-    explicacao: "Punir alguém exige ouvir a pessoa, entender o contexto e responder pelas consequências. A IA não escuta nem sente, e pode errar ao interpretar um comportamento. Decisões que afetam a vida de alguém ficam com pessoas."
+    contexto: "Criatividade",
+    situacao: "Um estudante utiliza uma IA para criar ideias para um cartaz de um evento escolar.",
+    pergunta: "Quem escolhe a ideia que será utilizada?",
+    sugerido: "juntos",
+    explicacao: "A IA pode apresentar diferentes sugestões e ajudar na criatividade. O estudante deve avaliar as opções e escolher aquela que melhor representa o objetivo do trabalho."
   },
   {
     contexto: "Informação",
-    situacao: "Chega no grupo uma notícia impactante e você quer saber se ela é verdadeira.",
-    pergunta: "Quem verifica a informação?",
+    situacao: "Uma IA responde a uma pergunta histórica, mas apresenta uma data diferente da encontrada no livro didático.",
+    pergunta: "Quem decide qual informação está correta?",
     sugerido: "juntos",
-    explicacao: "A IA ajuda a buscar fontes e a achar sinais de problema, mas também pode inventar informações com aparência convincente. Você confere em fontes confiáveis antes de acreditar e de compartilhar."
+    explicacao: "A IA pode ajudar a pesquisar e comparar informações, mas também pode cometer erros. É importante consultar livros, documentos históricos e fontes confiáveis antes de aceitar uma resposta."
   },
   {
-    contexto: "Rotina",
-    situacao: "O e-mail separa mensagens de spam e as envia automaticamente para a lixeira.",
-    pergunta: "Quem decide o que é spam?",
+    contexto: "Dia a dia",
+    situacao: "Uma IA organiza automaticamente os compromissos de uma pessoa em uma agenda digital.",
+    pergunta: "Quem organiza os horários da agenda?",
     sugerido: "ia",
-    explicacao: "Filtrar grande volume de mensagens repetitivas é um bom trabalho para a IA. Vale olhar a pasta de spam de vez em quando, porque às vezes ela erra e esconde mensagens importantes."
+    explicacao: "A IA consegue organizar horários e enviar lembretes de maneira prática. Como a pessoa pode revisar e alterar a agenda quando necessário, essa tarefa pode ser automatizada."
+  },
+  {
+    contexto: "Meio ambiente",
+    situacao: "Uma IA analisa dados sobre o clima e prevê uma possível enchente em uma cidade.",
+    pergunta: "Quem decide quais medidas de prevenção serão tomadas?",
+    sugerido: "juntos",
+    explicacao: "A IA pode analisar dados e alertar sobre riscos, mas as pessoas responsáveis precisam avaliar a situação e organizar as medidas de prevenção. A tecnologia ajuda a tomar decisões mais rápidas, enquanto os humanos consideram as necessidades da população."
+  },
+  {
+    contexto: "Ética digital",
+    situacao: "Uma pessoa utiliza IA para criar uma foto falsa de um colega e compartilhá-la na internet como se fosse verdadeira.",
+    pergunta: "Quem deve ser responsabilizado pelo conteúdo criado?",
+    sugerido: "pessoa",
+    explicacao: "A pessoa que utiliza a ferramenta deve pensar nas consequências de suas ações. A IA pode gerar imagens, mas isso não justifica prejudicar alguém. É importante respeitar a privacidade e não compartilhar conteúdos falsos."
   }
 ];
 
 var DICAS = [
   {
-    titulo: "Confira as fontes",
-    texto: "Respostas de IA podem parecer certas e estar erradas. Procure a informação em uma fonte confiável antes de usar.",
-    pratica: "Compare com um livro do acervo, um site oficial ou um professor."
+    titulo: "Questione as respostas",
+    texto: "A inteligência artificial pode apresentar informações incorretas mesmo quando parece ter certeza. Não aceite tudo sem verificar.",
+    pratica: "Pesquise o assunto em pelo menos uma fonte confiável antes de utilizar a resposta."
   },
   {
-    titulo: "Proteja seus dados",
-    texto: "O que você escreve em uma ferramenta de IA pode ser guardado. Não envie senhas, documentos, endereço ou fotos de outras pessoas.",
-    pratica: "Troque nomes e dados reais por exemplos."
+    titulo: "Use a IA com responsabilidade",
+    texto: "A IA pode facilitar muitas tarefas, mas é importante entender o que você está fazendo e não depender dela para tudo.",
+    pratica: "Tente resolver o problema sozinho e utilize a IA para esclarecer suas dúvidas."
   },
   {
-    titulo: "Diga quando usou IA",
-    texto: "Esconder o uso de IA engana quem lê. Contar como você usou mostra honestidade e ajuda o professor a avaliar o seu aprendizado.",
-    pratica: "Escreva uma linha, como: usei IA para revisar a ortografia."
+    titulo: "Cuide da sua privacidade",
+    texto: "Informações pessoais podem ser sensíveis e não devem ser compartilhadas sem necessidade em ferramentas digitais.",
+    pratica: "Evite informar senhas, endereço, documentos e dados pessoais em conversas com IA."
   },
   {
-    titulo: "Pense primeiro",
-    texto: "Tente resolver sozinho antes de pedir ajuda. A IA funciona melhor como apoio do que como substituta do seu raciocínio.",
-    pratica: "Escreva a sua ideia e só depois peça uma opinião."
+    titulo: "Identifique conteúdos falsos",
+    texto: "A inteligência artificial consegue criar imagens, vídeos e áudios que parecem reais, mas podem apresentar situações inventadas.",
+    pratica: "Confira a origem do conteúdo e procure outras fontes antes de compartilhar."
   },
   {
-    titulo: "Respeite as pessoas",
-    texto: "Imagens, vozes e textos podem ser criados ou alterados por IA. Não use a imagem de alguém sem permissão e não espalhe conteúdo falso.",
-    pratica: "Antes de compartilhar, pergunte: isso pode machucar alguém?"
+    titulo: "Valorize suas próprias ideias",
+    texto: "A IA pode ajudar a desenvolver uma ideia, mas sua criatividade e seu pensamento crítico continuam sendo importantes.",
+    pratica: "Crie um rascunho com suas próprias ideias antes de pedir sugestões à IA."
   },
   {
-    titulo: "A decisão é sua",
-    texto: "A IA sugere e você responde pelo que faz. Quanto maior o impacto sobre a vida de uma pessoa, maior deve ser o papel do humano.",
-    pratica: "Em decisões importantes, ouça alguém de confiança."
+    titulo: "Entenda os limites da tecnologia",
+    texto: "A IA não compreende todas as situações humanas e pode reproduzir preconceitos presentes nos dados utilizados em seu treinamento.",
+    pratica: "Avalie se a resposta é justa, considere o contexto e peça ajuda humana quando necessário."
   }
 ];
-
 /* ------------------------- lógica (não precisa mudar) ------------------------- */
 (function () {
   var $ = function (id) { return document.getElementById(id); };
