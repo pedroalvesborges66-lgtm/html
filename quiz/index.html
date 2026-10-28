@@ -636,13 +636,13 @@ tr:last-child td { border-bottom: 0; }
     </section>
     <section class="modulos" aria-label="Módulos">
       <article class="modulo">
-        <p class="rotulo">Elemento 1</p>
+        <p class="rotulo">Môdulo 1</p>
         <h2>Quiz das escolhas</h2>
         <p><span class="js-total"></span> Descubra quem toma as melhores decisões! Em 10 situações do cotidiano, escolha se a decisão deve ser feita pela inteligência artificial, por uma pessoa ou em conjunto.</p>
         <button class="btn" type="button" data-ir="jogo">Iniciar o quiz</button>
       </article>
       <article class="modulo">
-        <p class="rotulo">Elemento 2</p>
+        <p class="rotulo">Môdulo 2</p>
         <h2>Dicas para usar a IA</h2>
         <p><span class="js-total-dicas"></span> Confira 6 dicas práticas para aproveitar a inteligência artificial com responsabilidade, nos estudos e no dia a dia, usando seus recursos de forma consciente e segura.</p>
         <button class="btn sec" type="button" data-ir="guia">Ver as dicas</button>
@@ -891,7 +891,7 @@ var DICAS = [
     respondeu = false;
     $("quiz").hidden = false;
     $("resultado").hidden = true;
-    $("progresso-texto").textContent = "Dilema " + (indice + 1) + " de " + total;
+    $("progresso-texto").textContent = "Pergunta " + (indice + 1) + " de " + total;
     $("progresso-barra").style.width = (indice / total * 100) + "%";
     $("q-contexto").textContent = d.contexto;
     $("q-situacao").textContent = d.situacao;
